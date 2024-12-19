@@ -1,0 +1,118 @@
+@media print {
+  @page {
+    margin: 0;
+    size: 70mm auto;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+  
+  #printable-invoice,
+  #printable-invoice * {
+    visibility: visible;
+  }
+
+  #printable-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70mm !important;
+    max-width: 70mm !important;
+    font-size: 10pt !important;
+    line-height: 1.2 !important;
+    padding: 5mm !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset all colors to black for thermal printing */
+  #printable-invoice * {
+    color: black !important;
+    border-color: black !important;
+    background: none !important;
+  }
+
+  /* Ensure proper text wrapping */
+  #printable-invoice {
+    word-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* Header styles */
+  #printable-invoice h1 {
+    font-size: 14pt !important;
+    font-weight: bold !important;
+    margin: 0 0 4pt 0 !important;
+    text-align: center !important;
+  }
+
+  /* Dividers */
+  #printable-invoice .border-dashed {
+    border-top: 1px dashed black !important;
+    margin: 4pt 0 !important;
+  }
+
+  /* Product items */
+  #printable-invoice .product-item {
+    margin: 3pt 0 !important;
+    text-align: left !important;
+  }
+
+  /* Product name */
+  #printable-invoice .product-name {
+    text-align: center !important;
+    font-weight: bold !important;
+    margin-bottom: 2pt !important;
+  }
+
+  /* Amounts */
+  #printable-invoice .flex.justify-between {
+    display: flex !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+  }
+
+  /* Totals section */
+  #printable-invoice .totals {
+    margin-top: 6pt !important;
+    font-weight: bold !important;
+    text-align: right !important;
+  }
+
+  /* Footer */
+  #printable-invoice .text-center {
+    text-align: center !important;
+    margin-top: 6pt !important;
+  }
+
+  /* Spacing */
+  #printable-invoice .space-y-1 > * + * {
+    margin-top: 2pt !important;
+  }
+
+  #printable-invoice .space-y-3 > * + * {
+    margin-top: 6pt !important;
+  }
+
+  /* Font sizes */
+  #printable-invoice .text-sm {
+    font-size: 9pt !important;
+  }
+
+  #printable-invoice .text-xs {
+    font-size: 8pt !important;
+  }
+
+  #printable-invoice .text-base {
+    font-size: 11pt !important;
+  }
+
+  #printable-invoice .text-xl {
+    font-size: 14pt !important;
+  }
+}
